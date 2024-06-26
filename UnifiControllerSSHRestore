@@ -1,0 +1,13 @@
+# Used to restore a Unifi Controller back to a previous software version
+# Ran on a Unifi Controller that had a failed firmware upgrade from 6.2.26 to a new version
+# These commands resolved the issue
+
+# Verified Java Updated
+apt install -y openjdk-8-jre-headless
+
+# Downloaded Software
+cd /tmp
+wget https://dl.ui.com/unifi/6.2.26/unifi_sysvinit_all.deb
+
+# Installed Software
+dpkg -i unifi_sysvinit_all.deb
